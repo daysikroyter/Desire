@@ -4,4 +4,196 @@
 @import 'libs';
 @import 'global';
 
+// header
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+
+.menu {
+  display: flex;
+  gap: 0 80px;
+  padding: 0 60px 0 35px;
+
+  &__link {
+    @extend %title-font;
+    line-height: 1.38;
+    padding-bottom: 4px;
+    position: relative;
+
+    &::before {
+      @extend %pseudo;
+      width: 0;
+      height: 2px;
+      border-radius: 1px;
+      background-color: #979797;
+      bottom: 0;
+      left: auto;
+      right: 0;
+      transition: width 0.5s ease;
+    }
+
+    &:hover::before {
+      width: 100%;
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+// footer
+
+.footer {
+
+  &__content {
+    background-color: #DFDFDF;
+  }
+
+  &__inner {
+    padding: 60px 0 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+  }
+
+  &__info {
+    max-width: 540px;
+    width: 100%;
+  }
+
+  &__title {
+    @extend %title-font;
+    color: $title;
+    line-height: 1.43;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    max-width: 476px;
+    color: #5a5a5a;
+    margin-bottom: 15px;
+  }
+
+  &__info-email {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 30px;
+    margin-bottom: 22px;
+    position: relative;
+
+    &::before {
+      @extend %pseudo;
+      @extend %bg;
+      background-size: auto;
+      background-image: url('../images/message-ico.svg');
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__form {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__input {
+    padding: 6px 18px;
+    border: 1px solid $title;
+    border-radius: 21px;
+    max-width: 368px;
+    width: 100%;
+
+    &::placeholder {
+      color: #a1a1a1;
+    }
+  }
+
+  &__btn {
+    width: 160px;
+    padding: 6px 12px;
+    color: #fff;
+    background-color: $title;
+    border-radius: 21px;
+  }
+
+  &__list {
+    width: 125px;
+    margin-right: 90px;
+  }
+  
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+  &__link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #707070;
+  }
+
+  &__copy {
+    text-align: center;
+    color: #a1a1a1;
+    background-color: $title;
+    padding: 42px 15px;
+  }
+}
+
+.social {
+  width: 125px;
+  
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #707070;
+    padding-left: 28px;
+    position: relative;
+
+    &::before {
+      @extend %pseudo;
+      @extend %bg;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--facebook::before {
+      background-image: url('../images/facebook.svg');
+    }
+
+    &--instagram::before {
+      background-image: url('../images/instagram.svg');
+    }
+
+    &--pinterest::before {
+      background-image: url('../images/pinterest.svg');
+    }
+
+    &--whatsapp::before {
+      background-image: url('../images/whatsapp.svg');
+    }
+
+    &--youtube::before {
+      width: 18px;
+      height: 12px;
+      background-image: url('../images/youtube.svg');
+    }
+  }
+}

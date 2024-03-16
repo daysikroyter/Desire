@@ -1,0 +1,19 @@
+$title: #363838;
+$default: #5a5a5a;
+
+%pseudo {
+  content: '';
+  position: absolute;
+  display: block;
+}
+
+%title-font {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+%bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
