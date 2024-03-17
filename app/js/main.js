@@ -15,4 +15,11 @@ $(function () {
       $('body').removeClass('lock');
     }
   });
+
+  $('.top__slider').slick({
+    fade: true,
+    dots: true,
+    arrows: false,
+    autoplay: true
+  });
 });
