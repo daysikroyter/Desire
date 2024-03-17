@@ -116,7 +116,7 @@
 .top {
   &__inner {
     position: relative;
-    
+
     &::after {
       @extend %pseudo;
       @extend %bg;
@@ -127,7 +127,7 @@
       z-index: -1;
     }
   }
-  
+
   &__item-inner {
     display: flex;
     justify-content: center;
@@ -202,7 +202,7 @@
 .decor {
   @extend %bg;
   background-image: url('../images/decor-bg.jpg');
-  
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -231,6 +231,101 @@
 
   &__text {
     max-width: 540px;
+  }
+}
+
+// work-path
+
+.works-path {
+  padding: 80px 0 110px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__box {
+    display: flex;
+    border-bottom: 1px solid rgba($title, .7);
+    position: relative;
+
+    &::before {
+      @extend %pseudo;
+      bottom: -5px;
+      left: 0;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background-color: $title;
+    }
+  }
+
+  &__item {
+    width: 250px;
+    position: relative;
+
+    &--consultation,
+    &--production {
+      padding-bottom: 25px;
+    }
+
+    &--production {
+      margin-left: 317px;
+
+      &::before {
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    &--measurements::before,
+    &--production::before {
+      @extend %pseudo;
+      background-color: $title;
+      width: 1px;
+      height: 20px;
+    }
+
+    &--measurements {
+      margin-left: 306px;
+      padding-top: 25px;
+
+      &::before {
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__item-title {
+    @extend %title-font;
+    line-height: 1.43;
+    color: $title;
+    padding: 10px 0 10px 52px;
+    margin-bottom: 15px;
+    position: relative;
+
+    &::before {
+      @extend %pseudo;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      @extend %bg;
+      width: 42px;
+      height: 42px;
+    }
+
+    &--consultation::before {
+      background-image: url('../images/consultation-ico.svg');
+    }
+
+    &--production::before {
+      background-image: url('../images/production-ico.svg');
+    }
+
+    &--measurements::before {
+      background-image: url('../images/measurements-ico.svg');
+      background-size: contain;
+    }
   }
 }
 
