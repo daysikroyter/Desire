@@ -48,6 +48,69 @@
   margin: 0 auto;
 }
 
+.rightside-menu {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  max-width: 694px;
+  width: 100%;
+  padding: 40px 15px 0;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+
+  &--close {
+    transform: translateX(500%);
+  }
+
+  &__close {
+    margin: 0 0 60px 35px;
+  }
+  
+  &__content {
+    text-align: center;
+    max-width: 485px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 40px;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    display: block;
+    color: $title;
+    @extend %title-font;
+    font-size: 36px;
+    line-height: 1.41;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    position: relative;
+
+    &::before {
+      @extend %pseudo;
+      height: 2px;
+      width: 252px;
+      background-color: #979797;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__text {
+    margin-bottom: 75px;
+  }
+}
+
 // footer
 
 .footer {

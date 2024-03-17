@@ -10,6 +10,29 @@ body {
   font-weight: 400;
   line-height: 1.68;
   color: $default;
+  overflow-x: hidden;
+  position: relative;
+
+  &::before {
+    @extend %pseudo;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba($title, .9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+
+  &.lock {
+    overflow-y: hidden;
+
+    &::before {
+      z-index: 4;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
 
 .wrapper {
