@@ -55,6 +55,19 @@ body {
   padding: 0 15px;
 }
 
+.container-fluid {
+  max-width: 1920px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title {
+  @extend %title-font;
+  font-size: 36px;
+  line-height: 1.4;
+  color: $title;
+}
+
 .slick-dots {
   display: flex;
   justify-content: center;
@@ -77,5 +90,65 @@ body {
     &:hover {
       background-color: #ffef35;
     }
+  }
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+
+  &__link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    &:hover .collection__info {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__info {
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 10px;
+    background-color:  rgba(#fff, .7)
+  }
+
+  &__title {
+    @extend %title-font;
+    font-size: 20px;
+    line-height: 1.25;
+    color: $title;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    position: relative;
+
+    &::before {
+      @extend %pseudo;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      width: 200px;
+      background-color: #6d7278;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #707070;
   }
 }

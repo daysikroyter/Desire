@@ -169,7 +169,35 @@
   }
 }
 
-//
+// new-collection
+
+.new-collection {
+  padding: 130px 0 100px;
+  text-align: center;
+
+  &__title {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    position: relative;
+
+    &::before {
+      @extend %pseudo;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #6D7278;
+      width: 252px;
+      height: 1px;
+    }
+  }
+
+  &__text {
+    max-width: 730px;
+    margin: 0 auto 30px;
+  }
+}
+
+// 
 
 // footer
 
