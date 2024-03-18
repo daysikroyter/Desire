@@ -187,6 +187,12 @@ body {
     background-color: transparent;
     transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
 
+    &:hover {
+      color: $title;
+      background-color: #ffef35;
+      border-color: #ffef35;
+    }
+
     &.mixitup-control-active {
       color: $title;
       background-color: #ffef35;
