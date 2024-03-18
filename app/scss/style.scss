@@ -723,10 +723,27 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
   }
+
+  &__img {
+    margin: 0 auto;
+  }
 }
 
 // promo 
 
 .promo {
   padding-bottom: 70px;
+}
+
+// gallery page
+
+// gallery-page
+
+.gallery-page {
+  padding: 80px 0 150px;
+
+  .gallery__element:nth-child(8) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
 }
