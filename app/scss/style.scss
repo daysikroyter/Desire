@@ -657,6 +657,11 @@
 
   &__img {
     object-fit: cover;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   &__content {
@@ -706,4 +711,22 @@
     height: 2px;
     margin-top: -2px;
   }
+}
+
+// partners
+
+.partners {
+  padding: 15px 0 60px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+}
+
+// promo 
+
+.promo {
+  padding-bottom: 70px;
 }
