@@ -258,3 +258,35 @@ body {
     color: $default;
   }
 }
+
+.email {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 30px;
+  position: relative;
+
+  &::before {
+    @extend %pseudo;
+    @extend %bg;
+    background-size: auto;
+    background-image: url('../images/message-ico.svg');
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.address {
+  margin-bottom: 25px;
+
+  &__link {
+    font-style: normal;
+  }
+
+  .email {
+    margin-top: 15px;
+  }
+}

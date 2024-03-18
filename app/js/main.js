@@ -22,6 +22,14 @@ $(function () {
     arrows: false,
     autoplay: true
   });
+
+  $('.explore__list').slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 10,
+    slidesToScroll: 4,
+    autoplay: true
+  });
 });
 
 const mixer = mixitup('.gallery__list');
