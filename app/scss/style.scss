@@ -41,6 +41,10 @@
       left: 0;
       right: auto;
     }
+
+    &--active::before {
+      width: 100%;
+    }
   }
 }
 
@@ -536,3 +540,6 @@
     }
   }
 }
+
+// about page
+
