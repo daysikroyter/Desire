@@ -237,10 +237,14 @@
 // work-path
 
 .works-path {
-  padding: 80px 0 110px;
+  padding: 80px 0 90px;
 
   &__title {
     margin-bottom: 40px;
+  }
+
+  &__items {
+    margin-bottom: 110px;
   }
 
   &__box {

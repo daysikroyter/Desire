@@ -124,7 +124,7 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease;
     padding: 10px;
-    background-color:  rgba(#fff, .7)
+    background-color: rgba(#fff, .7)
   }
 
   &__title {
@@ -151,5 +151,72 @@ body {
     font-size: 14px;
     font-weight: 600;
     color: #707070;
+  }
+}
+
+.gallery {
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 2;
+    color: #8f8d8d;
+    padding: 5px 18px;
+    border-radius: 20px;
+    border: 1px solid #454647;
+    background-color: transparent;
+    transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+
+    &.mixitup-control-active {
+      color: $title;
+      background-color: #ffef35;
+      border-color: #ffef35;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__element:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  &__link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      @extend %pseudo;
+      inset: 0;
+      z-index: 3;
+      background-color: rgba($title, 0);
+      transition: background-color 0.5s ease;
+    }
+
+    &:hover::before {
+      background-color: rgba($title, .5);
+    }
+
+    &:hover .gallery__img {
+      transform: scale(1.05);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
   }
 }
