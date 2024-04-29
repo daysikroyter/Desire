@@ -299,3 +299,28 @@ body {
     object-fit: cover;
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  &__prev {
+    transform: scale(-1, 1);
+  }
+
+  &__item--disabled {
+    display: none;
+  }
+
+  &__item {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #707070;
+  }
+
+  &__link--active {
+    color: $title;
+  }
+}
