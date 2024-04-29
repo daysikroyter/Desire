@@ -290,3 +290,12 @@ body {
     margin-top: 15px;
   }
 }
+
+.social-links {
+  display: flex;
+  gap: 20px;
+
+  &__img {
+    object-fit: cover;
+  }
+}
