@@ -1090,3 +1090,162 @@
     right: 16px;
   }
 }
+
+// blog one
+
+.blog-one {
+
+  &__text,
+  &__blockquote {
+    margin-bottom: 40px;
+  }
+
+  &__subject {
+    margin-bottom: 10px;
+  }
+
+  &__blockquote {
+    background-color: transparent;
+    padding: 0 35px;
+    text-align: left;
+  }
+
+  &__blockquote-text::before {
+    left: 0;
+    transform: none;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 0;
+    border: 1px solid #DFDFDF;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 295px;
+    position: relative;
+
+    &::before {
+      @extend %pseudo;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url('../images/prev.svg');
+      @extend %bg;
+      width: 12px;
+      height: 23px;
+    }
+  }
+
+  &__link--prev {
+    padding-left: 33px;
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  &__link--next {
+    text-align: right;
+    padding-right: 33px;
+
+    &::before {
+      right: 0;
+      transform: translateY(-50%) scale(-1, 1);
+    }
+  }
+
+  &__reviews {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @extend %title-font;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $title;
+    margin-bottom: 15px;
+  }
+
+  &__user {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__review {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__name {
+    @extend %title-font;
+    font-style: normal;
+    line-height: 1.43;
+    color: $title;
+  }
+
+  &__time {
+    display: block;
+    font-size: 14px;
+    color: #a1a1a1;
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    font-size: 14px;
+    font-weight: 600;
+    color: #707070;
+    align-self: start;
+  }
+
+  &__post-title {
+    @extend %title-font;
+    color: $title;
+    margin-bottom: 25px;
+  }
+
+  &__form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__textarea {
+    width: 100%;
+    min-height: 125px;
+  }
+
+  &__input {
+    max-width: 360px;
+    width: 100%;
+  }
+
+  &__input,
+  &__textarea {
+    border: 1px solid #dfdfdf;
+    border-radius: 24px;
+    padding: 14px 17px;
+    color: #1a1a1a;
+  }
+
+  &__label {
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: #a1a1a1;
+  }
+
+  &__form-btn {
+    width: 160px;
+    padding: 6px 12px;
+    color: #fff;
+    background-color: $title;
+    border-radius: 21px;
+  }
+}
