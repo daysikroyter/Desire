@@ -1,6 +1,24 @@
 $title: #363838;
 $default: #5a5a5a;
 
+$breakpoints: (
+  "phone-s": 321px,
+  "phone-m": 366px,
+  "phone": 376px,
+  "phone-2": 481px,
+  "phone-3": 561px,
+  "middle": 680px,
+  "tablet": 769px,
+  "tablet-2": 891px,
+  "tablet-3": 993px,
+  "desktop": 1050px,
+  "large-desktop": 1100px,
+  "xl-desktop": 1250px,
+  "mobile-height-l": 788px,
+  "mobile-height": 576px,
+  "mobile-height-2": 440px
+);
+
 %pseudo {
   content: '';
   position: absolute;
